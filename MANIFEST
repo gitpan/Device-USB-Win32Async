@@ -1,0 +1,11 @@
+Build.PL
+Changes
+lib/Device/USB/Win32Async.pm
+Makefile.PL
+MANIFEST
+README
+t/00.load.t
+t/local_perlcritic.t
+t/pod-coverage.t
+t/pod.t
+META.yml                                 Module meta-data (added by MakeMaker)
