@@ -1,3 +1,7 @@
+package Device::USB::Win32Async;
+
+our $VERSION = 0.31;
+
 package Device::USB::Device;
 
 require 5.006;
@@ -14,7 +18,7 @@ use Inline (
         ),
         ($ENV{LIBUSB_INCDIR} ? ( INC => "-I\"$ENV{LIBUSB_INCDIR}\"" ) : () ),
         NAME => 'Device::USB::Win32Async',
-        VERSION => '0.30',
+        VERSION => '0.31',
    );
 
 Inline->init();
@@ -26,11 +30,7 @@ Device::USB::Win32Async - Add async functions to Device::USB
 
 =head1 VERSION
 
-Version 0.30
-
-=cut
-
-our $VERSION='0.30';
+Version 0.31
 
 =head1 SYNOPSIS
 
@@ -84,7 +84,7 @@ define multiple context variables as needed (ie - $Context1, $Context2, &c).
 
 ##########################################################################################
 #
-# Version 0.30 - Added support for asynchronous I/O
+# Version 0.31 - Added support for asynchronous I/O
 #
 # The caller supplies a scalar $Context which we use to keep opaque (from the caller)
 #   information about the I/O operation.

@@ -1,5 +1,7 @@
 Revision history for Device-USB-Win32Async
 
+0.31   Wed Dec 16 20:22:00 2009
+       Re-release to fix indexing.
 0.30   Wed Dec 2 22:19:08 2009
        Initial release.
 
