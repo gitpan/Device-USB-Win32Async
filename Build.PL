@@ -9,7 +9,7 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/Device/USB/Win32Async.pm',
     requires => {
         'Test::More' => 0,
-        'Device::USB' => 0.30,
+        'Device::USB' => 0.31,
     },
     add_to_cleanup      => [ 'Device-USB-Win32Async-*' ],
 );

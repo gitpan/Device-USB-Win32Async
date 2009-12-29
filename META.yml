@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Device-USB-Win32Async
-version:            0.31
+version:            0.32
 abstract:           Add async functions to Device::USB
 author:
     - Rajstennaj Barrabas <barrabas@barrabas.mv.com>
@@ -11,7 +11,7 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    Device::USB:  0.3
+    Device::USB:  0.31
     Test::More:   0
 no_index:
     directory:

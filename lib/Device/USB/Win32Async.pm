@@ -1,6 +1,13 @@
+#
+# Note that the package line is different from the file name. We only need to add
+#   functionality to the Device::USB::Device package, and this is a convenient way.
+#
 package Device::USB::Win32Async;
 
-our $VERSION = 0.31;
+use warnings;
+use strict;
+
+our $VERSION = 0.32;
 
 package Device::USB::Device;
 
@@ -18,7 +25,7 @@ use Inline (
         ),
         ($ENV{LIBUSB_INCDIR} ? ( INC => "-I\"$ENV{LIBUSB_INCDIR}\"" ) : () ),
         NAME => 'Device::USB::Win32Async',
-        VERSION => '0.31',
+        VERSION => '0.32',
    );
 
 Inline->init();
@@ -30,7 +37,7 @@ Device::USB::Win32Async - Add async functions to Device::USB
 
 =head1 VERSION
 
-Version 0.31
+Version 0.32
 
 =head1 SYNOPSIS
 
@@ -84,7 +91,7 @@ define multiple context variables as needed (ie - $Context1, $Context2, &c).
 
 ##########################################################################################
 #
-# Version 0.31 - Added support for asynchronous I/O
+# Version 0.32 - Added support for asynchronous I/O
 #
 # The caller supplies a scalar $Context which we use to keep opaque (from the caller)
 #   information about the I/O operation.
