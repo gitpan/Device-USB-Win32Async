@@ -371,6 +371,8 @@ sub free_async {
     return libusb_free_async($_[0][0]);
     }
 
+=back
+
 # Patch the new methods into the Device::USB::Device class.
 {
     package Device::USB::Device;
@@ -383,8 +385,6 @@ sub free_async {
     *bulk_setup_async = \&Device::USB::Win32Async::bulk_setup_async;
     *isochronous_setup_async = \&Device::USB::Win32Async::isochronous_setup_async;
 }
-
-=back
 
 =head1 DEPENDENCIES
 
