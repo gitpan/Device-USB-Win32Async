@@ -7,7 +7,7 @@ package Device::USB::Win32Async;
 use warnings;
 use strict;
 
-our $VERSION = 0.34;
+our $VERSION = 0.35;
 
 require 5.006;
 use Carp;
@@ -21,7 +21,7 @@ use Inline (
         ),
         ($ENV{LIBUSB_INCDIR} ? ( INC => "-I\"$ENV{LIBUSB_INCDIR}\"" ) : () ),
         NAME => 'Device::USB::Win32Async',
-        VERSION => '0.34',
+        VERSION => '0.35',
    );
 
 Inline->init();
@@ -33,7 +33,7 @@ Device::USB::Win32Async - Add async functions to Device::USB
 
 =head1 VERSION
 
-Version 0.34
+Version 0.35
 
 =head1 SYNOPSIS
 
@@ -202,7 +202,7 @@ sub interrupt_setup_async {
     return libusb_interrupt_setup_async($self->{handle},$_[0][0],$_[1]);
     }
 
-=item submit_asynch($Context,$Buffer,$Size)
+=item submit_async($Context,$Buffer,$Size)
 
 Start an asynchronous I/O operation
 
@@ -238,7 +238,7 @@ sub submit_async {
     return libusb_submit_async($_[0][0],$_[1],$_[2]);
     }
 
-=item reap_asynch($Context,$Timeout)
+=item reap_async($Context,$Timeout)
 
 Get the results of an asynchronous operation and cancel if not complete.
 
@@ -276,7 +276,7 @@ sub reap_async {
     return $Status;
     }
 
-=item reap_asynch_nocancel($Context,$Timeout)
+=item reap_async_nocancel($Context,$Timeout)
 
 Get the results of an asynchronous operation, but continue request (return
 Device::USB::Device::ETIMEDOUT => -116) if not complete yet.
