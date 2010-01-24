@@ -1,6 +1,6 @@
 ---
 name: Device-USB-Win32Async
-version: 0.35
+version: 0.36
 author:
   - Rajstennaj Barrabas
 abstract: Add async functions to Device::USB
@@ -17,7 +17,7 @@ provides:
     file: lib/Device/USB/Win32Async.pm
   Device::USB::Win32Async:
     file: lib/Device/USB/Win32Async.pm
-    version: 0.35
+    version: 0.36
 generated_by: Module::Build version 0.350001
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html

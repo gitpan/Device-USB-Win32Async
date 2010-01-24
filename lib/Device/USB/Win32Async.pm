@@ -7,7 +7,7 @@ package Device::USB::Win32Async;
 use warnings;
 use strict;
 
-our $VERSION = 0.35;
+our $VERSION = 0.36;
 
 require 5.006;
 use Carp;
@@ -21,7 +21,7 @@ use Inline (
         ),
         ($ENV{LIBUSB_INCDIR} ? ( INC => "-I\"$ENV{LIBUSB_INCDIR}\"" ) : () ),
         NAME => 'Device::USB::Win32Async',
-        VERSION => '0.35',
+        VERSION => '0.36',
    );
 
 Inline->init();
@@ -33,7 +33,7 @@ Device::USB::Win32Async - Add async functions to Device::USB
 
 =head1 VERSION
 
-Version 0.35
+Version 0.36
 
 =head1 SYNOPSIS
 
@@ -382,7 +382,12 @@ sub free_async {
     *interrupt_setup_async = \&Device::USB::Win32Async::interrupt_setup_async;
     *bulk_setup_async = \&Device::USB::Win32Async::bulk_setup_async;
     *isochronous_setup_async = \&Device::USB::Win32Async::isochronous_setup_async;
+    *ETIMEDOUT = \&Device::USB::Win32Async::ETIMEDOUT;
 }
+
+=item ETIMEDOUT
+
+Constant representing a return from an asynchronous routine due to timeout.
 
 =back
 
